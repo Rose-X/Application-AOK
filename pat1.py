@@ -12,7 +12,7 @@ def charger_donnees():
 
 df = charger_donnees()
 
-st.title("Application de Recommandation de Films")
+st.title("Application de Recommandation de Films !!!!!!!")
 
 # 1. Création du profil utilisateur
 st.header("1. Création de votre profil utilisateur")
