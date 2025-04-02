@@ -5,6 +5,26 @@ from sklearn.neighbors import NearestNeighbors
 import numpy as np
 from auth import authenticate, logout
 from data_loader import charger_donnees
+import streamlit as st
+
+st.markdown(
+    """
+    <style>
+    .st-emotion-cache-bm2z3a  {
+        background-color: #003366; /* Remplace cette couleur par celle de ton choix */
+    }
+    .st-emotion-cache-6qob1r  {
+        background-color: #002244 !important; /* Remplace cette couleur par celle de ton choix */
+        }
+
+    
+    .st-emotion-cache-wjc4zv {
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Initialisation de la session pour gérer la connexion
 if "authenticated" not in st.session_state:
