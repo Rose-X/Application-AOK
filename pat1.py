@@ -16,9 +16,16 @@ st.markdown(
     .st-emotion-cache-6qob1r  {
         background-color: #002244 !important; /* Remplace cette couleur par celle de ton choix */
         }
-
-    
-    .st-emotion-cache-wjc4zv {
+    .st-emotion-cache-102y9h7 {
+        color: white !important;
+    }
+    .st-emotion-cache-y73bov {
+        color: white !important;
+    }
+    .st-emotion-cache-1s2v671 {
+        color: white !important;
+    }
+    .st-emotion-cache-1fmytai {
         color: white !important;
     }
     </style>
@@ -56,7 +63,7 @@ if page == "Accueil":
     st.title("Application de Recommandation de Films")
 
     # 1. Création du profil utilisateur
-    st.header("1. Création de votre profil utilisateur")
+    st.header("Création de votre profil utilisateur")
     profil_utilisateur = []
     films_disponibles = df['title'].unique()
 
@@ -76,12 +83,11 @@ if page == "Accueil":
             st.warning("Veuillez saisir 3 films avec leurs genres.")
 
     # 2. Implémentation des approches de recommandation
-    st.header("2. Implémentation des approches de recommandation")
+    st.header("Recommandation")
     approche = st.radio("Méthode :", ["Collaborative - Mémoire", "Collaborative - Modèle KNN", "Basée sur le contenu"])
 
     # 3. Calcul des résultats
-    if st.button("Calculer les résultats") and len(profil_utilisateur) == 3:
-        st.header("3. Résultats")
+    if st.button("Chercher les films") and len(profil_utilisateur) == 3:
 
         utilisateur_df = pd.DataFrame(profil_utilisateur)
 
@@ -97,7 +103,7 @@ if page == "Accueil":
 
             df["similarite"] = df["genres"].apply(jaccard_score)
             recommendations = df.sort_values("similarite", ascending=False).head(5)
-            st.header("4. Affichage des résultats")
+            st.header("Les films recommandés par le contenu")
             st.write("Méthode : basée sur le contenu")
             st.dataframe(recommendations[["title", "similarite"]].rename(columns={"title": "Titre", "similarite": "Score de similarité"}))
 
@@ -117,7 +123,7 @@ if page == "Accueil":
             scores = scores.drop(user_profile.index, errors='ignore')
             recommandations = scores.sort_values(ascending=False).head(5)
 
-            st.header("4. Affichage des résultats")
+            st.header("Les films collaboratifs memoires recommandés")
             st.write("Méthode : collaborative basée sur la mémoire")
             st.dataframe(recommandations.reset_index().rename(columns={0: "Score", "title": "Titre"}))
 
@@ -137,12 +143,12 @@ if page == "Accueil":
             moyennes = voisins.mean().drop(user_profile.index, errors='ignore')
             recommandations = moyennes.sort_values(ascending=False).head(5)
 
-            st.header("4. Affichage des résultats")
+            st.header("Les films collaboratifs KNN recommandés")
             st.write("Méthode : collaborative basée sur un modèle KNN")
             st.dataframe(recommandations.reset_index().rename(columns={0: "Score", "title": "Titre"}))
 
 elif page == "Tous les films":
-    st.title("🎬 Tous les Films")
+    st.title(" Tous les Films")
 
     # Champ de recherche
     search = st.text_input("🔍 Rechercher un film :", "")
@@ -163,4 +169,4 @@ elif page == "À propos":
     Cette application de recommandation de films utilise des approches collaboratives et basées sur le contenu.
     Elle permet aux utilisateurs de créer leur profil et d'obtenir des recommandations en fonction de leurs goûts cinématographiques.
     """)
-    st.write("Développée par [Votre Nom] - 2023")
+    st.write("Développée par Aiden et Alexandre - 2023")
