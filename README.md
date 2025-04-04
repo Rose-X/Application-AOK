@@ -470,4 +470,3 @@ elif page == "À propos":
 
 ### Améliorer l’algorithme avec des modèles de deep learning ou des techniques de filtrage hybride.
 
-### Créer une version mobile responsive ou une API backend pour d’autres applications.
