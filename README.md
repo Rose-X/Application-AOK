@@ -464,10 +464,10 @@ elif page == "À propos":
 
 # Perspectives d’évolution
 
-## Ajouter une base de données réelle (ex : PostgreSQL ou MongoDB) pour stocker les utilisateurs et leurs historiques.
+### Ajouter une base de données réelle (ex : PostgreSQL ou MongoDB) pour stocker les utilisateurs et leurs historiques.
 
-## Permettre aux utilisateurs de laisser des commentaires ou notes en temps réel.
+### Permettre aux utilisateurs de laisser des commentaires ou notes en temps réel.
 
-## Améliorer l’algorithme avec des modèles de deep learning ou des techniques de filtrage hybride.
+### Améliorer l’algorithme avec des modèles de deep learning ou des techniques de filtrage hybride.
 
-## Créer une version mobile responsive ou une API backend pour d’autres applications.
+### Créer une version mobile responsive ou une API backend pour d’autres applications.
