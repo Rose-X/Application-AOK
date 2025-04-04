@@ -284,7 +284,7 @@ if st.button("Chercher les films") and len(profil_utilisateur) == 3:
 - **Conversion en DataFrame :**  
   - Transforme la liste `profil_utilisateur` en un DataFrame pour faciliter les manipulations (tri, sélection, etc.).
 
-#### i. Approche "Basée sur le contenu"
+## i. Approche "Basée sur le contenu"
 
 ```python
 film_prefere = utilisateur_df.sort_values("note", ascending=False).iloc[0]
@@ -340,7 +340,7 @@ st.dataframe(recommendations[["title", "similarite"]].rename(columns={"title": "
 
 - **Renommage des colonnes** pour une présentation plus claire.
 
-#### ii. Approche "Collaborative - Mémoire"
+## ii. Approche "Collaborative - Mémoire"
 
 ```python
 ratings_matrix = df.pivot_table(index='userId', columns='title', values='rating')
@@ -423,7 +423,7 @@ st.dataframe(recommandations.reset_index().rename(columns={0: "Score", "title": 
   - Permet de remettre l’index sous forme de colonne pour l’affichage.
 - **Renommage des colonnes** pour une meilleure lisibilité.
 
-#### iii. Approche "Collaborative - Modèle KNN"
+## iii. Approche "Collaborative - Modèle KNN"
 
 Création de la matrice des notes :
 
