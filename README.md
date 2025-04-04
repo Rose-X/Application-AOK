@@ -129,13 +129,13 @@ if not st.session_state.authenticated:
 ### c. Bouton de déconnexion
 
 ```python
-if st.sidebar.button("🔒 Se déconnecter"):
+if st.sidebar.button(" Se déconnecter"):
     logout()
     st.session_state.authenticated = False
     st.rerun()
 ```
 
-- **`st.sidebar.button("🔒 Se déconnecter")` :**  
+- **`st.sidebar.button(" Se déconnecter")` :**  
   - Crée un bouton dans la barre latérale pour permettre à l’utilisateur de se déconnecter.
 - **`logout()` :**  
   - Fonction qui effectue les opérations de déconnexion (par exemple, nettoyage des cookies ou jetons de session).
@@ -508,7 +508,7 @@ st.dataframe(recommandations.reset_index().rename(columns={0: "Score", "title": 
 ```python
 elif page == "Tous les films":
     st.title(" Tous les Films")
-    search = st.text_input("🔍 Rechercher un film :", "")
+    search = st.text_input(" Rechercher un film :", "")
 ```
 
 - **`st.text_input` :**  
@@ -539,7 +539,7 @@ st.dataframe(filtered_df[["title", "genres", "rating"]].rename(columns={
 
 ```python
 elif page == "À propos":
-    st.title("📊 À propos de l'application")
+    st.title(" À propos de l'application")
     st.write("""
     Cette application de recommandation de films utilise des approches collaboratives et basées sur le contenu.
     Elle permet aux utilisateurs de créer leur profil et d'obtenir des recommandations en fonction de leurs goûts cinématographiques.
