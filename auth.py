@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Liste d'utilisateurs avec identifiants (à remplacer par une base de données sécurisée)
 USERS = {
     "admin": "password123",
     "user1": "test123",
@@ -8,7 +7,6 @@ USERS = {
 }
 
 def authenticate():
-    """ Gère l'authentification de l'utilisateur """
     st.sidebar.title("Connexion")
     username = st.sidebar.text_input("Nom d'utilisateur")
     password = st.sidebar.text_input("Mot de passe", type="password")
@@ -28,6 +26,5 @@ def authenticate():
     return st.session_state.authenticated
    
 def logout():
-    """Déconnecte l'utilisateur en réinitialisant la session."""
     st.session_state.authenticated = False
     st.session_state.username = None
