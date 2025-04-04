@@ -164,7 +164,7 @@ elif page == "Tous les films":
     }))
 
 elif page == "À propos":
-    st.title("📊 À propos de l'application")
+    st.title(" À propos de l'application")
     st.write("""
     Cette application de recommandation de films utilise des approches collaboratives et basées sur le contenu.
     Elle permet aux utilisateurs de créer leur profil et d'obtenir des recommandations en fonction de leurs goûts cinématographiques.
