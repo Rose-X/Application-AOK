@@ -462,14 +462,12 @@ elif page == "À propos":
 
 ---
 
-## Conclusion
+## Perspectives d’évolution
 
-Chaque section de ce code a un rôle précis :  
-- **Importations** pour disposer des outils nécessaires.  
-- **CSS personnalisé** pour adapter l’apparence de l’application.  
-- **Gestion de la session** pour contrôler l’accès via l’authentification.  
-- **Chargement et préparation des données** pour manipuler la liste des films.  
-- **Navigation et pages** pour séparer la création du profil, les recommandations, et l’affichage général.  
-- **Différentes méthodes de recommandation** illustrant des approches collaboratives (mémoire et KNN) et basées sur le contenu.  
+# Ajouter une base de données réelle (ex : PostgreSQL ou MongoDB) pour stocker les utilisateurs et leurs historiques.
 
-Chacune des fonctions et paramètres est choisie pour répondre à un besoin spécifique de l’application, allant de la gestion des interactions utilisateur à l’analyse des données pour produire des recommandations pertinentes. Ce niveau de détail te permettra d’expliquer le code point par point lors de tes présentations ou examens.
+# Permettre aux utilisateurs de laisser des commentaires ou notes en temps réel.
+
+# Améliorer l’algorithme avec des modèles de deep learning ou des techniques de filtrage hybride.
+
+# Créer une version mobile responsive ou une API backend pour d’autres applications.
